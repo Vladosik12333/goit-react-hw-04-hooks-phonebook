@@ -18,7 +18,11 @@ export default function App() {
   }, [contacts]);
 
   const submitContact = (name, number) => {
-    if (contacts.find(contact => contact.name === name))
+    if (
+      this.state.contacts.find(
+        contact => contact.name.toLowerCase() === name.toLowerCase(),
+      )
+    )
       return alert(`${name} is already in contacts.`);
 
     setContacts(contacts => [
