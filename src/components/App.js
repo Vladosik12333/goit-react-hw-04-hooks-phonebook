@@ -19,7 +19,7 @@ export default function App() {
 
   const submitContact = (name, number) => {
     if (
-      this.state.contacts.find(
+      contacts.find(
         contact => contact.name.toLowerCase() === name.toLowerCase(),
       )
     )
