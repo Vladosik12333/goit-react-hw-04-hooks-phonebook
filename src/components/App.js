@@ -53,7 +53,7 @@ export default function App() {
         handleContactInput={({ currentTarget }) =>
           setFilter(currentTarget.value)
         }
-      ></FindContact>
+      />
       <Contacts contacts={filterContacts()} deleteContact={deleteContact} />
     </>
   );
